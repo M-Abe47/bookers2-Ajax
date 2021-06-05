@@ -1,0 +1,21 @@
+<h2>Followers</h2>
+<% if @users.exists? %>
+  <%= render '/users/index', users: @users %>
+<% else %>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+      <p>There are no followers. </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<% end %>
