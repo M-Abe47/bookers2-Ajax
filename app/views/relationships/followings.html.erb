@@ -2,5 +2,20 @@
 <% if @users.exists? %>
   <%= render '/users/index', users: @users %>
 <% else %>
-  <p>ユーザーはいません</p>
+<table class='table'>
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+      <p>There are no followingusers. </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <% end %>
